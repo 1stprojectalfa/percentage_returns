@@ -18,7 +18,7 @@ def displaying_percentages(price):
         percentage = round(((unit)/(price))*100,3)
         print(f'If {price} changes to {potential_price} this represents a change of {percentage}%.')
         print('-----------------------------------------------------------------------')
-    
+        
 def displaying_prices_returns(buy_in_price, percentages, number_shares):
     for percentage in percentages:
         potential_price = round(buy_in_price*(1+percentage/100),2)
