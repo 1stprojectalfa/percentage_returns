@@ -1,8 +1,5 @@
 from math import log
 
-percentages = [-1]
-c = 10_000
-
 def compounded_fixed_returns(percentage, initial_c, periods):
     q = round(initial_c*(1 + percentage/100)**periods, 2)
     return q
