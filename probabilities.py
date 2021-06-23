@@ -116,11 +116,3 @@ def plotting_cartesian(trends):
     for trend in trends:
             plt.plot(trend, color = 'b', linestyle = '-', marker = '.') 
     plt.show()
-
-csv_file = 'TQQQ_Week_Max.csv'
-data = read_data(csv_file)
-percentages = building_returns(data)
-runs = builiding_sequences(percentages, 0, amax(percentages))
-cum_runs = building_set_cumulative_sequences(runs)
-display_cumulative_sequences(cum_runs)
-options_chain_probabilities(percentages, 109, 16) 
