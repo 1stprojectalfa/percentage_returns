@@ -1,10 +1,12 @@
 from itertools import groupby
 
+#Building sequences of returns by defining lower and upper bounds when given a list of percentages returns.
 def builiding_sequences(returns, lower_bound, upper_bound):
     filter_function = lambda x: x >= lower_bound and x <= upper_bound 
     sequences = [list(k) for i, k  in groupby(returns, filter_function)]
     return sequences
 
+#Private method that builds sequences compounding each element in a list of percentage returns.
 def _building_cumulative_sequence(percentages):
     values = []
     values.append(100)
@@ -45,6 +47,7 @@ def building_lengths_distribution(sequences):
         lengths_distribution.append(len(sequence))
     return lengths_distribution
 
+#Displaying sequences 
 def display_sequences(runs):
     for run in runs:
         print(f'Periods {len(run)}, run: {run} and sum: {round(sum(run),3)}%')
