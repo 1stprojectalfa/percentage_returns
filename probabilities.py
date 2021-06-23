@@ -4,10 +4,8 @@ from matplotlib import pyplot as plt
 from numpy import mean, std, amax, amin
 from returns import read_data, building_returns
 
+# Method that returns mean, standard deviation, maximum value and minimum value of a given distribution.
 def key_values(distribution):
-    """
-    returns: mean, standard deviation, max_value and min_value 
-    """ 
     u = mean(distribution)
     s = std(distribution)
     maximum = amax(distribution)
@@ -21,7 +19,7 @@ def building_target_range(returns, lower_bound, upper_bound):
             target_sequences.append(percentage)
     target_sequences.sort()
     return target_sequences
-
+ 
 def printing_probabilities(returns, target_returns):
     ratio = len(target_returns)/len(returns)
     ratio = round(ratio*100 ,2)
