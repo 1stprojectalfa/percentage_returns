@@ -25,5 +25,3 @@ def displaying_prices_returns(buy_in_price, percentages, number_shares):
         potential_return = round((potential_price - buy_in_price)*number_shares,2)
         print(f'If {buy_in_price} changes {percentage}%, the new price is {potential_price} with a return of {potential_return}.')
         print('-----------------------------------------------------------------------')
-
-displaying_percentages(81)
