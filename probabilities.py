@@ -114,3 +114,5 @@ def plotting_cartesian(trends):
     for trend in trends:
             plt.plot(trend, color = 'b', linestyle = '-', marker = '.') 
     plt.show()
+
+#Modified line
